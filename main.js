@@ -16,6 +16,7 @@ let negativeNumber=-999;
 console.log(negativeNumber);
 const number2=123;
 console.log(number2);
+
 const PI=3.14;
 console.log(PI);
 let floatNumber= 2.7;
@@ -36,11 +37,11 @@ console.log(name)
 // За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
 //     let a = 100; let b = '100'; let c = true;
 let a = 100;
-console.log(typeof (a))
+console.log(typeof a)
 let b = '100';
-console.log(typeof (b))
+console.log(typeof b)
 let c = true;
-console.log(typeof (c))
+console.log(typeof c)
 // Додаткове для тих хто цікавився prompt`oм
 // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
 let userName=prompt("Введіть сво ім'я");
