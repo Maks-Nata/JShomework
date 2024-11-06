@@ -42,8 +42,9 @@ let book4 = {
     title: 'football',
     pageCount: 450,
     genre: 'sport',
-    authors: ['Shevchenko', 54]
-}
+    authors: [{name: 'Shevchenko', age: 54,},
+        {name: 'Twen', age: 45,}],
+    };
 let book5 = {
     title: 'run',
     pageCount: 450,
