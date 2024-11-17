@@ -18,7 +18,8 @@ i++}
 // За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
 let index=0
 while (index<20){
-    document.write(`<h1>Development ${index}</h1>`);index++
+    document.write(`<h1>Development ${index}</h1>`);
+    index++
 }
 // Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону

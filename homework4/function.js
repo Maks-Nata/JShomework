@@ -91,13 +91,25 @@ function arrayMinValue(numbers) {
 }
 
 console.log(arrayMinValue([99,-11, -12, 22, 33, -44]));
+function arrayMaxValue(arrayNumbers) {
+ let max=arrayNumbers[0]
+    for (let i = 1; i < arrayNumbers.length; i++) {
+        let arrayNumber = arrayNumbers[i];
+        if(arrayNumber > max){
+            arrayNumber = max
+        }
 
+    }
+    return max
+}
+console.log(arrayMaxValue([99,-11, -12, 22, 33, -44]));
 // #EKRNVPM
 // - створити функцію sum(arr) яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 function sum(arr) {
-let basket = 0;
+    let basket = 0;
     for (const item of arr) {
-       basket = basket + item;
+        basket = basket + item;
+        
     }
     return basket
 }
