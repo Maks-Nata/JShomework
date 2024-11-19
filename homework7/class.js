@@ -213,5 +213,5 @@ Array.prototype.myfilter=function (preduc) {
     }
     return arr;
 }
-const result= cinderellas.myfilter((cinderella)=> cinderella.age > 35);
+const result= cinderellas.myfilter((cinderella)=> cinderella.age > 30);
 console.log(result)
