@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="productsArray"></div>
+<button id="prev"></button>
+<button id="next"></button>
+
+<script>
+    // зробити масив на 100 об'єктів та дві кнопки prev next
+// при завантажені сторінки з'являються перші 10 об'єктів.
+//     При натисканні next виводяться наступні 10 об'єктів
+// При натисканні prev виводяться попередні 10 об'єктів
+    let products = document.getElementById('productsArray');
+    let prev = document.getElementById('prev');
+    let next = document.getElementById('next')
+    arr=[]
+    for (let i = 0; i < 100; i++) {
+        arr.push({id:i,title:'tea'+(i+1)})
+
+    }
+    console.log(arr);
+    let counter= 0
+    let limit= 10;
+    next.addEventListener('click',function () {
+
+        for (let i = counter; i < limit; i++) {
+            products.innerText=arr.title;
+
+        }
+    })
+</script>
+
+</body>
+</html>
