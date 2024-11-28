@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="carts"></div>
+
+<script>
+    // #HmvAfRQM
+    // - взяти https://dummyjson.com/carts та вивести інформацію про всі корзини. Відобразити всі поля кожної корзини.
+    const containerCarts = document.getElementById('carts')
+    fetch('https://dummyjson.com/carts')
+        .then(value => value.json())
+        .then(cartsObject => {
+            const {carts} = cartsObject;
+            console.log(carts)
+
+            for (const cartElement of carts) {
+                const divCart = document.createElement('div');
+                divCart.classList.add('cartElement');
+                divCart.innerText = ` id:${cartElement.id}
+        total: ${cartElement.id}
+        discountedTotal: ${cartElement.discountedTotal},
+        userId: ${cartElement.userId},
+        totalProducts: ${cartElement.totalProducts},
+        totalQuantity: ${cartElement.totalQuantity}`
+                containerCarts.appendChild(divCart)
+                const ul = document.createElement('ul')
+                divCart.appendChild(ul)
+                for (const product of cartElement.products) {
+                    const li = document.createElement('li')
+                    li.innerText = `  title:${product.title}
+         price: ${product.price}
+         quantity: ${product.quantity}
+         total: ${product.total}
+         discountPercentage:${product.discountPercentage}
+         discountedTotal:${product.discountedTotal}`
+                    const img = document.createElement('img')
+                    img.src = product.thumbnail
+                    ul.append(li, img)
+                }
+            }
+        });
+
+
+
+
+</script>
+</body>
+</html>

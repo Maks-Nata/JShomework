@@ -29,10 +29,10 @@
     const cellValue= +tableGenerationForms.cell.value;
     const dataInfoValue=tableGenerationForms.dataInfo.value;
     console.log(rowValue,cellValue,dataInfoValue)
-    for (let i = 0; i < rowValue.length; i++) {
+    for (let i = 0; i < rowValue; i++) {
       const tr1 = document.createElement('tr');
 
-        for (let j = 0; j < cellValue.length; j++) {
+        for (let j = 0; j < cellValue; j++) {
             const td1 = document.createElement('td');
             td1.innerText=dataInfoValue
             tr1.appendChild(td1)
